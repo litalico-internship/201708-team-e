@@ -17,4 +17,6 @@
           = link_to "ログイン", new_user_session_path
       - else
         li
+          = link_to "体験を作る", new_experience_path
+        li
           = link_to "ログアウト", destroy_user_session_path, method: :delete
