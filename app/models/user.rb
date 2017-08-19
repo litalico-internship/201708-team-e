@@ -5,6 +5,9 @@ class User < ApplicationRecord
   has_many :reviews, through: :user_reviews
   has_many :user_reviews
 
+  has_many :experiences, through: :user_groups
+  has_many :user_groups
+
   validates :name, presence: true
 
   has_attached_file :avatar,
