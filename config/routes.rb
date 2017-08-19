@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  root 'experiences#index'
-  resources :experiences
+  devise_for :users
 end
