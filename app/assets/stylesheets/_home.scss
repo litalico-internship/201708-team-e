@@ -7,7 +7,7 @@
   background-position: 50% 50%;
   height: 100%;
   position: relative;
-  margin-bottom: 0px;
+  margin-bottom: 5em;
 
   .container .row {
     color: #fff;
@@ -28,3 +28,32 @@
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: 1200px){
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 992px){
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 768px){
+  .container {
+    width: 750px;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+
