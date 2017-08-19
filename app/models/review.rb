@@ -1,3 +1,4 @@
 class Review < ApplicationRecord
-  belongs_to :user
+  has_many :users, through: :user_reviews
+  has_many :user_reviews
 end

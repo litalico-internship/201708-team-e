@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170819162359) do
+ActiveRecord::Schema.define(version: 20170819162831) do
 
   create_table "experiences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 20170819162359) do
     t.index ["user_id"], name: "index_user_groups_on_user_id"
   end
 
+  create_table "user_reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_user_reviews_on_review_id"
+    t.index ["user_id"], name: "index_user_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -61,4 +70,6 @@ ActiveRecord::Schema.define(version: 20170819162359) do
   end
 
   add_foreign_key "reviews", "users"
+  add_foreign_key "user_reviews", "reviews"
+  add_foreign_key "user_reviews", "users"
 end
