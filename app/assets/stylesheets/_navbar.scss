@@ -1,0 +1,51 @@
+.navbar-default {
+  background: transparent;
+  border-color: transparent;
+  z-index: 10;
+
+  .navbar-nav > li > a {
+    color: white;
+    font-size: 13px;
+  }
+
+  .navbar-brand {
+    color: white;
+    letter-spacing: 3px;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+}
+
+// トップページのnavbarのドロップダウンがクリックされた時
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+  color: #555;
+}
+
+//navbar-deviseのcss
+.navbar-devise {
+  background: #fff;
+  border-color: #fff;
+  z-index: 10;
+
+  .navbar-nav > li > a {
+    color: #222222;
+    font-size: 13px;
+  }
+
+  .navbar-devise .navbar-brand {
+    color: #222222;
+  }
+
+  .navbar-brand {
+    letter-spacing: 3px;
+  }
+}
+
+// プロフィール画像
+.profile-0 {
+  width: 28px;
+  height: 28px;
+}
