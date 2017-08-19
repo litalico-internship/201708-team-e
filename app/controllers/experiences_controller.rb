@@ -5,7 +5,6 @@ class ExperiencesController < ApplicationController
 
   def show
     @experience = Experience.find(params[:id])
-    binding.pry
     @reviews = Review.all
   end
 
