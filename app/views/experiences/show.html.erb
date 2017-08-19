@@ -33,4 +33,11 @@
   <% end %>
 </p>
 
+<div>
+  <% @reviews.each do |review| %>
+    <div>評価：<%= review.rate %></div>
+    <div>コメント：<%= review.text %></div>
+  <% end %>
+</div>
+
 <%= link_to 'Back', experiences_path %>
