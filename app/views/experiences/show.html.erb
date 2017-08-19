@@ -25,19 +25,4 @@
   <%= @experience.image %>
 </p>
 
-<p>
-  <%= form_with(model: @experience, local: true) do |form| %>
-      <%= form.fields_for :reviews do |review| %>
-          <%= render "review_form", form: review %>
-      <% end %>
-  <% end %>
-</p>
-
-<div>
-  <% @reviews.each do |review| %>
-      <div>評価：<%= review.rate %></div>
-      <div>コメント：<%= review.text %></div>
-  <% end %>
-</div>
-
 <%= link_to 'Back', experiences_path %>
