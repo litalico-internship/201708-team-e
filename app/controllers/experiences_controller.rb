@@ -7,7 +7,7 @@ class ExperiencesController < ApplicationController
   # GET /experiences/1.json
   def show
     @experience = Experience.find(params[:id])
-    @review = Review.new
+    @reviews = Review.all
   end
 
   def update
