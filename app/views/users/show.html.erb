@@ -1,0 +1,9 @@
+<p>
+  <% if @user.detail != nil %>
+      ホストについて<br>
+    <%= @user.detail %>
+  <% else %>
+    ホストに関しての情報がありません。
+    <%= link_to '追加する', edit_user_path %>
+  <% end %>
+</p>
