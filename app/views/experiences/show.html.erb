@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @experience.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @experience.date %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @experience.place %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @experience.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @experience.image %>
+</p>
+
+<p>
+  <%= form_with(model: @experience, local: true) do |form| %>
+    <%= form.fields_for :reviews do |review| %>
+      <%= render "review_form", form: review %>
+    <% end %>
+  <% end %>
+</p>
+
+<%= link_to 'Back', experiences_path %>
