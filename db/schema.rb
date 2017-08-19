@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170819182006) do
+ActiveRecord::Schema.define(version: 20170819202024) do
 
   create_table "experiences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(version: 20170819182006) do
   end
 
   create_table "user_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "group_id"
+    t.bigint "experience_id"
     t.bigint "user_id"
     t.boolean "is_host", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_user_groups_on_group_id"
+    t.index ["experience_id"], name: "index_user_groups_on_experience_id"
     t.index ["user_id"], name: "index_user_groups_on_user_id"
   end
 
