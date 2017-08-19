@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @experience.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @experience.date %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @experience.place %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @experience.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @experience.image %>
+</p>
+
+<p>
+  <%= form_with(model: @experience, local: true) do |form| %>
+    <%= form.fields_for :reviews do |review| %>
+      <%= render "review_form", form: review %>
+    <% end %>
+  <% end %>
+</p>
+
+<div>
+  <% @reviews.each do |review| %>
+    <div>評価：<%= review.rate %></div>
+    <div>コメント：<%= review.text %></div>
+  <% end %>
+</div>
+
+<%= link_to 'Back', experiences_path %>
