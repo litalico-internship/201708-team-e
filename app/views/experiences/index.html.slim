@@ -41,6 +41,7 @@
             .pull-left
               .guest-name
                 | 実際に体験したゲストのレビュー
-          .guest-comment.arrow_box
-            p
-              = host.user.reviews.last.text
+          - if !host.user.reviews.empty?
+            .guest-comment.arrow_box
+              p
+                = host.user.reviews.last.text
