@@ -25,6 +25,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'bullet'
 end
 
 group :development do
