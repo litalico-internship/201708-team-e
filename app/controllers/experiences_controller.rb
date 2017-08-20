@@ -6,6 +6,7 @@ class ExperiencesController < ApplicationController
 
   def show
     @experience = Experience.find(params[:id])
+    @user = User.find(@experience.user_groups.where(is_host: 1).first.user_id)
   end
 
   def new

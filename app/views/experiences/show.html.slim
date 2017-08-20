@@ -1,0 +1,31 @@
+.container
+  .row
+    h2
+      = @experience.title
+
+.host_detail
+  strong
+    | Date:
+    = @experience.date
+
+.container
+  .row
+    .col-md-4
+      p.host-face
+        = image_tag @user.avatar
+    .col-md-8
+      = @user.detail
+
+.container
+  .row
+    .col-md-4
+      = image_tag @experience.image
+    .col-md-8
+      = @experience.content
+
+p
+  strong
+    | Place:
+    = @experience.place
+
+= link_to 'Back', experiences_path
