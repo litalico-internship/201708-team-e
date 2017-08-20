@@ -1,6 +1,7 @@
 class ExperiencesController < ApplicationController
 
   def index
+    @hosts = UserGroup.where(is_host: 1)
   end
 
   def show

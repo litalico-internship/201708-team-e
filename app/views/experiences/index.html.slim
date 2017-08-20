@@ -21,3 +21,5 @@
         .col-sm-6
           .pickup-area-left-inner
             p.host-face
+             - @hosts.each do |host|
+              = image_tag host.user.avatar
