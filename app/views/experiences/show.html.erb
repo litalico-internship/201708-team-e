@@ -25,4 +25,10 @@
   <%= @experience.image %>
 </p>
 
+<p>
+  <strong>Users:</strong>
+  <p><%= @experience.users.first.name %></p>
+  <p><%= @experience.users.count %></p>
+</p>
+
 <%= link_to 'Back', experiences_path %>

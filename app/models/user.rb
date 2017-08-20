@@ -4,6 +4,9 @@ class User < ApplicationRecord
 
   has_many :reviews, dependent: :destroy
 
+  has_many :user_groups
+  has_many :users, through: :user_groups
+
   validates :name, presence: true
 
   has_attached_file :avatar,
