@@ -14,12 +14,33 @@
       p
         | LGBTの人でもそうじゃなくても同じ体験を一緒にすることによって、みんな同じ人間だなあ、変わらないんだなあと認識してもらうサービスです。
 
+
 .pickup-area-individual
   .container
     .row
-      .col-sm-8.pickup-area-left
-        .col-sm-6
-          .pickup-area-left-inner
-            p.host-face
-             - @hosts.each do |host|
-              = image_tag host.user.avatar
+      - @hosts.each do |host|
+        .col-sm-8.pickup-area-left
+            .col-sm-6
+              .pickup-area-left-inner
+                p.host-face
+                  = image_tag host.user.avatar
+                p.host-name
+                  | 体験のホスト
+                  br
+                  = link_to host.user.name, user_path(host.user.id)
+              .host-message
+                = host.user.detail
+            .col-sm-6
+              .crop-img-pick-index
+                = image_tag host.user.experiences.last.image
+              h2
+                = link_to host.user.experiences.last.title, experience_path(host.user.experiences.last.id)
+
+        .col-sm-4.pickup-area-right
+          .clearfix
+            .pull-left
+              .guest-name
+                | 実際に体験したゲストのレビュー
+          .guest-comment.arrow_box
+            p
+              = host.user.reviews.last.text

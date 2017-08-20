@@ -36,3 +36,75 @@ p.host-face {
     border-radius: 50%;
   }
 }
+
+.host-name, .guest-name {
+  line-height: 2rem;
+  font-size: 1.3rem;
+  a {
+    font-size: 1.6rem;
+    color: #309CBA;
+    text-decoration: underline;
+  }
+}
+
+.crop-img-pick-index {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 58.5%;
+  img {
+    max-width: 100%;
+    min-width: 100%;
+    width: auto;
+    min-height: 100%;
+    max-height: 140%;
+    height: auto;
+    position: absolute;
+    top: -40%;
+    right: -40%;
+    bottom: -40%;
+    left: -40%;
+    margin: auto;
+  }
+}
+
+.pickup-area-left h2 {
+  height: 6.0rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+  color: #5C5C5C;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.pickup-area-right {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.arrow_box {
+  position: relative;
+  background: #F3F1ED;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
+}
+
+.guest-comment p {
+  line-height: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
