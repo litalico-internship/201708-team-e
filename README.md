@@ -34,20 +34,20 @@
 
 ## Asociation
 ### User
-  - has\_many :reviews, dependent: :destroy
+  - has\_many :reviews
   - has\_many :user\_groups
-  - has\_many :users, through: :user\_groups
+  - has\_many :users
 
 ### Review
   - belongs\_to :user
 
 ### Experience
   - has\_many :user\_groups
-  - has\_many :users, through: :user\_groups
+  - has\_many :users
 
 ### User_Group
   - belongs\_to :user
   - belongs\_to :experience
 
 ## Author
-[daijiromaeyama](https://github.com/daijiromaeyama)
+チームPaddy
