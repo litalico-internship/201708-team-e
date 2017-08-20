@@ -42,6 +42,7 @@
               .guest-name
                 | 実際に体験したゲストのレビュー
           - if !host.user.reviews.empty?
-            .guest-comment.arrow_box
-              p
-                = host.user.reviews.last.text
+            - host.user.reviews.each do |review|
+              .guest-comment.arrow_box
+                p
+                  = review.text

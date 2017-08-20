@@ -3,11 +3,6 @@
     h2
       = @experience.title
 
-.host_detail
-  strong
-    | Date:
-    = @experience.date
-
 .container
   .row
     .col-md-4
@@ -23,9 +18,14 @@
     .col-md-8
       = @experience.content
 
+.host_detail
+  strong
+    | 日程:
+    = @experience.date
+
 p
   strong
-    | Place:
+    | 場所:
     = @experience.place
 
 = link_to 'Back', experiences_path
