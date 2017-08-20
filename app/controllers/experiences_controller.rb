@@ -9,10 +9,10 @@ class ExperiencesController < ApplicationController
   end
 
   def new
+    @experience = Experience.new
   end
 
   def create
-    # experience = params.require(:experience).permit(:title, :host, :date, :place, :content)
     @experience = Experience.new(experience_params)
     @user_group = @experience.user_groups.build(user_id: current_user.id, experience_id: @experience.id, is_host: true)
 

@@ -1,7 +1,4 @@
-<h1>Experiences#new</h1>
-<p>Find me in app/views/experiences/new.html.erb</p>
-
-<%= form_with model: Experience.new do |form| %>
+<%= form_with model: @experience do |form| %>
     <p>タイトル</p>
     <%= form.text_field :title %>
 
