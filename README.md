@@ -10,9 +10,9 @@
 
 ### Users
 
-|name|email|detail|avatar\_file\_name|
-|:--:|:---:|:------:|:-----:|
-|string|string |text|string|
+|name|email|encrypted_password|detail|avatar\_file\_name|
+|:--:|:---:|:--:|:------:|:-----:|
+|string|string |string|text|string|
 
 ### Reviews
 
@@ -28,15 +28,15 @@
 
 ### User_Groups
 
-|group_id|user_id|is_host|
+|experience_id|user_id|is_host|
 |:------:|:-----:|:--:|
 |references|references|boolean|
 
-## Asociation
+## Association
 ### User
   - has\_many :reviews
   - has\_many :user\_groups
-  - has\_many :users
+  - has\_many :experiences
 
 ### Review
   - belongs\_to :user
