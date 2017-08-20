@@ -22,9 +22,7 @@
           .pickup-area-left-inner
             p.host-face
              - @hosts.each do |host|
-              - user = host.user
-              = image_tag user.avatar
-              = user.detail
-              = user.name
-              = user.experiences.last
-
+              = image_tag host.user.avatar
+              - #binding.pry
+              = host.user.experiences.last.title
+              = image_tag host.user.experiences.last.image

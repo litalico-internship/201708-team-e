@@ -1,0 +1,5 @@
+<%= form_with model: @user do |form| %>
+  <p>ホストについて</p>
+  <%= form.text_field :detail %>
+  <%= form.submit '追加' %>
+<% end %>

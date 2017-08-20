@@ -1,0 +1,20 @@
+<h1>Experiences#new</h1>
+<p>Find me in app/views/experiences/new.html.erb</p>
+
+<%= form_with model: Experience.new do |form| %>
+    <p>タイトル</p>
+    <%= form.text_field :title %>
+
+    <p>日付</p>
+    <%= form.date_field :date %>
+
+    <p>場所</p>
+    <%= form.text_field :place %>
+
+    <p>写真</p>
+    <%= form.text_field :image %>
+
+    <p>内容</p>
+    <%= form.text_field :content %>
+    <%= form.submit '作成' %>
+<% end %>

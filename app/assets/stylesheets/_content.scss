@@ -1,0 +1,38 @@
+.heading-section {
+  margin-bottom: 5em;
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    color: #a980cd;
+  }
+}
+
+.pickup-area-individual {
+  margin-top: 1.6rem;
+}
+
+.pickup-area-left {
+  background: #F3F2E4;
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+  &--inner {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.pickup-area-left-inner {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+p.host-face {
+  padding-right: 10px;
+  img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+  }
+}

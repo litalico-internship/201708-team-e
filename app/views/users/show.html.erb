@@ -1,0 +1,26 @@
+<p>
+  <% if @user.detail != nil %>
+      ホストについて<br>
+    <%= @user.detail %>
+  <% else %>
+    ホストに関しての情報がありません。
+    <%= link_to '追加する', edit_user_path %>
+  <% end %>
+</p>
+
+<p>
+  <% @reviews.each do |review| %>
+    <p>
+      <div>評価：<%= review.rate %></div>
+      <div>コメント：<%= review.text %></div>
+    </p>
+  <% end %>
+</p>
+
+<p>
+  <%= form_with(model: @user, local: true) do |form| %>
+      <%= form.fields_for :reviews do |review| %>
+          <%= render "review_form", form: review %>
+      <% end %>
+  <% end %>
+</p>
