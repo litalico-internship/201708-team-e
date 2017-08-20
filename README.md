@@ -49,5 +49,5 @@
   - belongs\_to :user
   - belongs\_to :experience
 
-## Author
-チームPaddy
+## Team
+Paddy
